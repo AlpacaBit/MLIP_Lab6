@@ -15,14 +15,16 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
 
-                # TODO fill out the path to conda here
-                # sudo /PATH/TO/CONDA init
+                # Initialize conda
+                sudo /home/team02/miniconda3/bin/conda init bash
+                source ~/.bashrc
 
-                # TODO Complete the command to run pytest
-                # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
+                # Run pytest in the mlip environment
+                sudo /home/team02/miniconda3/bin/conda run -n mlip pytest
 
-                echo 'pytest not runned'
-                exit 1 #comment this line after implementing Jenkinsfile
+                # Remove the exit 1 command as we've implemented the pytest run
+                echo 'pytest runned'    
+                # exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
             }

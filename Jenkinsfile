@@ -16,7 +16,8 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Initialize conda
-                source /home/ahenley/miniconda3/etc/profile.d/conda.sh
+                export PATH=/home/ahenley/miniconda3/bin:$PATH 
+                eval "$(conda shell.bash hook)"
                 conda activate mlip
                 
                 # Run pytest in the mlip environment

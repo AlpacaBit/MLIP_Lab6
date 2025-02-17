@@ -16,11 +16,11 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Initialize conda using absolute path
-                eval "$(/home/ahenley/miniconda3/condabin/conda shell.bash hook)"
+                source "/home/ahenley/miniconda3/etc/profile.d/conda.sh"
                 conda activate mlip-lab6
 
                 # Run pytest in the mlip environment
-                pytest
+                pytest -v 
 
                 # Remove the exit 1 command as we've implemented the pytest run
                 echo 'pytest runned'    

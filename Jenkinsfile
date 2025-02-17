@@ -16,7 +16,7 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Initialize conda using absolute path
-                source "/home/ahenley/miniconda3/etc/profile.d/conda.sh"
+                sudo source "/home/ahenley/miniconda3/etc/profile.d/conda.sh"
                 conda activate mlip-lab6
 
                 # Run pytest in the mlip environment

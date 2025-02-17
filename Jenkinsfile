@@ -16,7 +16,7 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Initialize conda using absolute path
-                eval "$(/Users/zhijie/miniconda3/bin/conda shell.bash hook)"
+                eval "$(/home/ahenley/miniconda3/condabin/conda shell.bash hook)"
                 conda activate mlip-lab6
 
                 # Run pytest in the mlip environment

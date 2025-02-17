@@ -16,11 +16,11 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Initialize conda
-                sudo /home/team02/miniconda3/bin/conda init bash
+                sudo /Users/zhijie/miniconda3/envs/mlip-lab6/bin/conda init bash
                 source ~/.bashrc
 
                 # Run pytest in the mlip environment
-                sudo /home/team02/miniconda3/bin/conda run -n mlip pytest
+                sudo /Users/zhijie/miniconda3/envs/mlip-lab6/bin/conda run -n mlip pytest
 
                 # Remove the exit 1 command as we've implemented the pytest run
                 echo 'pytest runned'    

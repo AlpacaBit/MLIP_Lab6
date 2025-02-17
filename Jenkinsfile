@@ -20,7 +20,7 @@ pipeline {
                 source ~/.bashrc
 
                 # Run pytest in the mlip environment
-                /home/ahenley/miniconda3/bin/conda run -n mlip-lab6 pytest -v
+                /home/ahenley/miniconda3/bin/conda run -n mlip pytest -v
 
                 # Remove the exit 1 command as we've implemented the pytest run
                 echo 'pytest runned'    
